@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+  
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="/styles/login.css"> 
+    <title>Login</title>
+  
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form action="/login" method="POST">
+        <h3>Se connecter</h3>
+
+        <label for="email">Email</label>
+        <input type="text" placeholder="Email" name="email"  id="email" autocomplete="false">
+
+        <label for="password">Password</label>
+        <input type="password" placeholder="password" name="password" id="password">
+
+        <button type="submit">Log In</button>
+
+        <% if(messages.error) { %>
+        <div class="error-container">
+            <h5><%= messages.error %></h5>
+        </div>
+        <% } %>
+
+       
+    </form>
+</body>
+</html>
